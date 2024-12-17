@@ -5,6 +5,10 @@
     box-sizing: border-box; /* Prevents padding from affecting width */
 }
 
+html, body {
+    height: 100%; /* Ensures the body takes up the full height of the screen */
+}
+
 html {
     background: #fffff2;
     color: #3f3e3e;
@@ -68,9 +72,10 @@ main {
     display: flex;
     justify-content: center; /* Horizontally center the content */
     align-items: center; /* Vertically center the content */
-    height: 100vh; /* Full height of the viewport */
-    margin: 0; /* No additional margins */
-    padding: 2rem; /* Padding for spacing */
+    min-height: 100vh; /* Ensures the content takes at least full viewport height */
+    padding: 2rem; /* Padding around the content */
+    box-sizing: border-box; /* Prevents padding from affecting size calculations */
+    overflow: auto; /* Enables scrolling if content overflows */
 }
 
 /* Paragraph Styling */
@@ -81,6 +86,7 @@ p {
     margin: 0 auto; /* Center the text */
     max-width: 80%; /* Make text take 80% of the screen width */
     padding: 0 2rem; /* Padding on sides for spacing */
+    word-wrap: break-word; /* Prevents long words from overflowing */
 }
 
 /* Links General Styling */
@@ -92,4 +98,26 @@ a {
 a:hover {
     color: #00A0C6;
     text-decoration: orange wavy underline;
+}
+
+/* Mobile Responsive Design */
+@media (max-width: 768px) {
+    main {
+        min-height: auto; /* Allow the content to expand naturally */
+        padding: 1rem; /* Adjust padding for smaller screens */
+    }
+
+    p {
+        font-size: 24px; /* Reduce font size for better readability on mobile */
+        max-width: 90%; /* Allow more width for text on mobile */
+        padding: 0 1rem; /* Adjust padding for mobile */
+    }
+}
+
+/* Small Mobile Screens */
+@media (max-width: 480px) {
+    p {
+        font-size: 20px; /* Further reduce font size for very small screens */
+        padding: 0 0.5rem; /* Adjust padding for smaller screens */
+    }
 }
