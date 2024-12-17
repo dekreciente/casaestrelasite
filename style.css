@@ -1,97 +1,88 @@
-
+/* General styles */
 * {
-    scrollbar-width: none;
-    margin:0;
-    padding:0;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Prevents padding from affecting width */
 }
-
-
 
 html {
     background: #fffff2;
-    /* background: #FCF9E2; */
     color: #3f3e3e;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
-nav {
-    
+/* Top Navigation Bar */
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     position: fixed;
-    right: 1rem;
-    display: block;
-    unicode-bidi: isolate;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4rem; /* Adjust as needed */
+    background-color: inherit;
+    padding: 0 2rem;
+    z-index: 1000;
+    border-bottom: 1px solid black; /* Horizontal line at the top */
 }
 
+.casaestrela {
+    font-size: 18px;
+    text-decoration: none;
+    color: #3f3e3e;
+}
 
-    li {
-	    float: left;
-        font-size: 18px; 
-        padding: 2rem;
-        list-style-type: none;
-    }
+.nav {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
 
+.nav li a {
+    font-size: 18px;
+    text-decoration: none;
+    color: #3f3e3e;
+    white-space: nowrap;
+}
 
+.nav li a:hover {
+    color: #00A0C6;
+    text-decoration: orange wavy underline;
+}
+
+/* Horizontal Line at the Bottom */
 footer {
     position: fixed;
     bottom: 0;
-    z-index: 10;
-    width: calc(100vw - 2rem);
+    left: 0;
+    width: 100%;
     background-color: inherit;
-    border-top: var(--border);
-    padding: 1rem;
+    text-align: center;
+    padding: 1rem 0;
+    border-top: 1px solid black; /* Horizontal line at the bottom */
 }
 
-
-main-text   {
-    position: fixed;
-    text-align: justify;
-    text-align-last: center;
+/* Main Content */
+main {
+    margin: 6rem 2rem 4rem; /* Avoid overlap with fixed header and footer */
 }
 
 p {
+    font-size: 20px;
+    line-height: 1.6;
     text-align: center;
-    padding: 24rem;
-    font-size: 50px;  
-  }
+    margin: 0 auto;
+    max-width: 800px; /* Keep text readable */
+}
 
+/* Links General Styling */
 a {
-    color:  #3f3e3e;
+    color: #3f3e3e;
     text-decoration: none;
 }
-  
+
 a:hover {
-    color:#00A0C6; 
+    color: #00A0C6;
     text-decoration: orange wavy underline;
-    cursor:pointer;  
 }
-
-.horizontallinefooter {
-    border: none;                      /** <- Note this line */
-    border-top: 1px solid black;       /** <- And then this line */
-    color: rgb(0, 0, 0);
-    height: 1px;
-    width: 100%; 
-}
-
-
-.horizontallinetop{
-    border: none;                      /** <- Note this line */
-    color: rgb(0, 0, 0);
-    height: 1px;
-    width: 100%; 
-    border-bottom: 1px solid black;
-}
-
-
-
-
-.casaestrela   {
-    position: fixed;
-    text-align: left;
-    padding: 2rem;
-    top: 0;
-    z-index: 10; 
-    font-size: 18px;  
-}
-
-

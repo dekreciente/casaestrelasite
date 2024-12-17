@@ -3,38 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Casa Estrela</title>
+    <title>Casa Estrela | Home</title>
     <link rel="stylesheet" href="/style.css">
 </head>
 
 
-
-
-
-
 <body>
-    
-    
-    <a href="/index.html" class="casaestrela" id="home-menu">Casa Estrela</a>
+    <!-- Top bar with Casa Estrela and navigation links -->
+    <div class="top-bar">
+        <a href="/index.html" class="casaestrela" id="home-menu">Casa Estrela</a>
+        <nav>
+            <ul class="nav">
+                <li><a href="https://www.instagram.com/casaestrela__/" target="_blank">Instagram</a></li>
+                <li><a href="mailto:acasaestrela@gmail.com" target="_blank">Email</a></li>
+            </ul>
+        </nav>
+    </div>
 
-    <!-- Navigation -->
-    <nav>
-        <ul class="nav">
-            <li></li>
-            <li><a href="https://www.instagram.com/casaestrela__/" target="_blank"> Instagram</a></li>
-            <li><a href="mailto:acasaestrela@gmail.com" target="_blank">Email</a></li>
-        </ul>
-    </nav>
+    <!-- Horizontal line below top bar -->
     <div class="horizontallinetop"></div>
-   
 
-    
-    
-
-
-
-     <!-- Main Text -->
-     <main class="main-text">
+    <!-- Main content -->
+    <main class="main-text">
         <p>
             Casa Estrela: is a non-profit organization and self-organized space for artists, theoreticians, 
             researchers, practitioners, and activists. This is an ongoing process of building a place for 
@@ -47,16 +37,15 @@
 
     <!-- Footer -->
     <footer>
-<div class="horizontallinefooter"></div>
+        <div class="horizontallinefooter"></div>
         <div>
             It is <span id="time">14:24:24</span> on a <span id="day">Monday</span> in Molelos (PT) right now  
             <span id="activity">the cats sleep</span> 
         </div>
     </footer>
 
-     <!-- CLOCK OF THE DAY -->
+    <!-- Clock script -->
     <script>
-        
         function updateClock() {
             const now = new Date();
             const time = now.toLocaleTimeString("pt-PT", { timeZone: "Europe/Lisbon" });
@@ -69,12 +58,10 @@
             applyTheme(now);
         }
 
-        /* ---------------------------- ACTIVITY LOGIC ---------------------------- */
         function updateActivity(now, time, day) {
             let activity = "";
             const weekdays = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"];
 
-        /* ---------------------------- WHEN ARE THE CATS SLEEPING ---------------------------- */   
             if (time >= "09:00:00" && time < "10:00:00") {
                 activity = "the cats are playing.";
                 document.body.style.setProperty('--circle-color', "#00ff00");
@@ -86,7 +73,6 @@
             document.getElementById("activity").textContent = activity;
         }
 
-        /* ---------------------------- CHANGE COLOR ---------------------------- */
         function applyTheme(now) {
             const hour = now.getHours();
             if (hour < 7 || hour >= 20) {
@@ -98,12 +84,10 @@
             }
         }
 
-        /* ---------------------------- INIT ---------------------------- */
         document.addEventListener("DOMContentLoaded", () => {
             updateClock();
             setInterval(updateClock, 1000);
         });
     </script>
-
 </body>
 </html>
