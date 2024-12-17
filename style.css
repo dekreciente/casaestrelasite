@@ -1,0 +1,73 @@
+
+* {
+    scrollbar-width: none;
+    margin:0;
+    padding:0;
+}
+
+
+html {
+    background: #fffff2;
+    /* background: #FCF9E2; */
+    color: #3f3e3e;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+nav {
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+    display: block;
+    unicode-bidi: isolate;
+    font-size: 22px;
+  
+}
+
+
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  
+     
+  }
+
+
+footer {
+    position: fixed;
+    bottom: 0;
+    z-index: 10;
+    width: calc(100vw - 2rem);
+    background-color: inherit;
+    border-top: var(--border);
+    padding: 1rem;
+}
+
+
+
+p {
+    text-align: center;
+    padding: 24rem;
+    font-size: 50px;
+   
+  }
+
+  a {
+    color:  #3f3e3e;
+    text-decoration: none;
+}
+  
+a:hover {
+    color:#00A0C6; 
+    text-decoration: green wavy underline;
+    cursor:pointer;  
+}
+
+.horizontalline {
+    position: absolute; /*so I could use 'top: 30px' */
+    bottom: 40px;
+    width: 100%;
+    border-top:1px solid black;
+}
+
