@@ -65,15 +65,22 @@ footer {
 
 /* Main Content */
 main {
-    margin: 6rem 2rem 4rem; /* Avoid overlap with fixed header and footer */
+    display: flex;
+    justify-content: center; /* Horizontally center the content */
+    align-items: center; /* Vertically center the content */
+    height: 100vh; /* Full height of the viewport */
+    margin: 0; /* No additional margins */
+    padding: 2rem; /* Padding for spacing */
 }
 
+/* Paragraph Styling */
 p {
-    font-size: 20px;
+    font-size: 40px; /* Large text */
     line-height: 1.6;
-    text-align: center;
-    margin: 0 auto;
-    max-width: 800px; /* Keep text readable */
+    text-align: center; /* Spread text evenly across the page */
+    margin: 0 auto; /* Center the text */
+    max-width: 80%; /* Make text take 80% of the screen width */
+    padding: 0 2rem; /* Padding on sides for spacing */
 }
 
 /* Links General Styling */
