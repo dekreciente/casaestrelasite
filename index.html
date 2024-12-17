@@ -6,16 +6,35 @@
     <title>Casa Estrela</title>
     <link rel="stylesheet" href="/style.css">
 </head>
+
+
+
+
+
+
 <body>
+    
+    
+    <a href="/index.html" class="casaestrela" id="home-menu">Casa Estrela</a>
+
+    <!-- Navigation -->
     <nav>
-        <ul class="nobull">
+        <ul class="nav">
             <li></li>
-            <li><a href="https://www.instagram.com/casaestrela__/" target="_blank">↳ Instagram</a></li>
-            <li><a href="mailto:acasaestrela@gmail.com" target="_blank">↳ Email</a></li>
+            <li><a href="https://www.instagram.com/casaestrela__/" target="_blank"> Instagram</a></li>
+            <li><a href="mailto:acasaestrela@gmail.com" target="_blank">Email</a></li>
         </ul>
     </nav>
+    <div class="horizontallinetop"></div>
+   
 
-    <header>
+    
+    
+
+
+
+     <!-- Main Text -->
+     <main class="main-text">
         <p>
             Casa Estrela: is a non-profit organization and self-organized space for artists, theoreticians, 
             researchers, practitioners, and activists. This is an ongoing process of building a place for 
@@ -24,18 +43,20 @@
             We have been developing projects and receiving people since 2023. To stay with us, there is no need 
             to apply, nor is there any selection. We practice solidarity prices, as accessible as possible.
         </p>
-    </header>
+    </main>
 
+    <!-- Footer -->
     <footer>
-        <div class="horizontalline"></div>
+<div class="horizontallinefooter"></div>
         <div>
             It is <span id="time">14:24:24</span> on a <span id="day">Monday</span> in Molelos (PT) right now  
-            <span id="activity">the cats sleep</span> and probably our cats are sleeping.
+            <span id="activity">the cats sleep</span> 
         </div>
     </footer>
 
+     <!-- CLOCK OF THE DAY -->
     <script>
-        /* ---------------------------- CLOCK AND DAY OF THE WEEK ---------------------------- */
+        
         function updateClock() {
             const now = new Date();
             const time = now.toLocaleTimeString("pt-PT", { timeZone: "Europe/Lisbon" });
@@ -52,19 +73,20 @@
         function updateActivity(now, time, day) {
             let activity = "";
             const weekdays = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"];
-            
+
+        /* ---------------------------- WHEN ARE THE CATS SLEEPING ---------------------------- */   
             if (time >= "09:00:00" && time < "10:00:00") {
-                activity = "and Kirsten is probably *essaying*";
+                activity = "the cats are playing.";
                 document.body.style.setProperty('--circle-color', "#00ff00");
             } else if (time >= "10:00:00" && time < "18:00:00" && weekdays.includes(day)) {
-                activity = "and Kirsten should be working";
+                activity = "the cats are sleeping.";
                 document.body.style.setProperty('--circle-color', "#0000ff");
             }
 
             document.getElementById("activity").textContent = activity;
         }
 
-        /* ---------------------------- DARK MODE ---------------------------- */
+        /* ---------------------------- CHANGE COLOR ---------------------------- */
         function applyTheme(now) {
             const hour = now.getHours();
             if (hour < 7 || hour >= 20) {
@@ -82,5 +104,6 @@
             setInterval(updateClock, 1000);
         });
     </script>
+
 </body>
 </html>
