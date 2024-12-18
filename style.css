@@ -55,6 +55,7 @@ html {
     text-decoration: orange wavy underline;
 }
 
+
 /* Horizontal Line at the Bottom */
 footer {
     position: fixed;
@@ -103,6 +104,17 @@ a:hover {
 }
 
 
+
+
+
+
+
+
+
+
+
+
+
 /* Laptop Responsive Design */
 @media only screen and (min-width: 1224px) {
     main {
@@ -112,6 +124,20 @@ a:hover {
 
     p {
         font-size: 24px; /* Adjust font size for larger screens */
+        width: 70%; /* Limit width on larger screens for better readability */
+        margin: 0 auto; /* Center the text */
+    }
+}
+
+
+@media screen and (min-width: 1920px) {
+    main {
+        padding: 2rem; /* Add more padding for larger screens */
+        width: 100%; /* Ensure full width on larger screens */
+    }
+
+    p {
+        font-size: 44px; /* Adjust font size for larger screens */
         width: 70%; /* Limit width on larger screens for better readability */
         margin: 0 auto; /* Center the text */
     }
@@ -150,5 +176,63 @@ a:hover {
     p {
         font-size: 18px; /* Further reduce font size for very small screens */
         max-width: 100%; /* Allow full width for text */
+    }
+}
+
+
+
+/* Main Container: Center the Table */
+main {
+    display: flex;
+    justify-content: center; /* Horizontal centering */
+    align-items: center; /* Vertical centering */
+    min-height: 100vh; /* Take at least full viewport height */
+    padding: 1rem; /* Avoid content touching edges on small screens */
+}
+
+
+
+/* Table Styling */
+table {
+    border-collapse: collapse; /* Ensures clean borders */
+    width: 50%; /* Default width, adjust as needed */
+    margin: 2rem auto; /* Center the table horizontally with margin */
+    font-size: 18px; /* Default font size */
+    line-height: 1.5; /* Improve readability */
+}
+
+td {
+    text-align: left; /* Align text to the left */
+    padding: 0.2rem 1rem; /* Vertical and horizontal padding */
+    white-space: nowrap; /* Prevent content from wrapping */
+}
+
+/* Responsive Design for Smaller Screens */
+@media (max-width: 1024px) {
+    table {
+        width: 70%; /* Allow more space for the table */
+        font-size: 16px; /* Reduce font size */
+    }
+}
+
+@media (max-width: 768px) {
+    table {
+        width: 90%; /* Table takes most of the screen */
+        font-size: 14px; /* Smaller font size */
+    }
+
+    td {
+        padding: 0.2rem 0.5rem; /* Reduce padding for tighter fit */
+    }
+}
+
+@media (max-width: 480px) {
+    table {
+        width: 100%; /* Full width on very small screens */
+        font-size: 12px; /* Adjust font size for small screens */
+    }
+
+    td {
+        padding: 0.2rem 0.3rem; /* Minimal padding */
     }
 }
