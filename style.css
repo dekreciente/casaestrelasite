@@ -51,8 +51,7 @@ html {
 }
 
 .nav li a:hover {
-    color: #00A0C6;
-    text-decoration: orange wavy underline;
+    color: red;
 }
 
 
@@ -99,8 +98,7 @@ a {
 }
 
 a:hover {
-    color: #00A0C6;
-    text-decoration: orange wavy underline;
+    color: red;
 }
 
 
