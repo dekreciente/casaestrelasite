@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Casa Estrela | Home</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="icon" href="../favicon.ico" type="image/x-icon">
+
+    <!-- Include jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+    <!-- Top bar with Casa Estrela and navigation links -->
+    <div class="top-bar">
+        <a href="/html/index.html" class="casaestrela" id="home-menu">Casa Estrela</a>
+        <nav>
+            <ul class="nav">
+                <li><a href="https://www.instagram.com/casaestrela__/" target="_blank">Instagram</a></li>
+                <li><a href="mailto:acasaestrela@gmail.com" target="_blank">Email</a></li>
+            </ul>
+        </nav> 
+    </div>
+
+<!-- Molelos -->
+    <div class="main-container">
+        <!-- Left Column (Text) -->
+        <div class="left-column">
+            <h1>Welcome to Topolò</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam imperdiet libero vitae sapien vulputate, ut fermentum nulla lacinia. Curabitur tincidunt cursus elit. Fusce auctor turpis eu justo vulputate, sit amet dictum magna ultricies.</p>
+            <p>Curabitur tincidunt cursus elit. Fusce auctor turpis eu justo vulputate, sit amet dictum magna ultricies. Nam vel felis ac ante volutpat fringilla. Etiam et est eget odio pharetra vestibulum. Nulla facilisi.</p>
+            <p>More text...</p>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Possimus, corporis accusamus? Placeat facilis sapiente, ad, maiores, neque illum illo aliquid quas fugiat enim inventore asperiores quisquam temporibus dolorum nemo! Cupiditate.</p>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Possimus, corporis accusamus? Placeat facilis sapiente, ad, maiores, neque illum illo aliquid quas fugiat enim inventore asperiores quisquam temporibus dolorum nemo! Cupiditate.</p>
+        </div>
+    
+        <!-- Vertical Line (Separator) -->
+        <div class="separator"></div>
+    
+        <!-- Right Column (Images) -->
+        <div class="right-column">
+            <img src="https://via.placeholder.com/300" alt="Image 1">
+            <img src="https://via.placeholder.com/300" alt="Image 2">
+            <img src="https://via.placeholder.com/300" alt="Image 3">
+            <img src="https://via.placeholder.com/300" alt="Image 4">
+        </div>
+    </div>
+    
+
+    <!-- Placeholder for Footer -->
+    <div id="footer-placeholder"></div>
+
+    <!-- Include the jQuery to load the footer dynamically -->
+    <script>
+        $(document).ready(function() {
+            // Load the footer content dynamically
+            $('#footer-placeholder').load('../html/footer.html', function() {
+                // The footer is loaded, re-initialize the clock
+                updateClock();
+                setInterval(updateClock, 1000);
+            });
+        });
+    </script>
+
+    <!-- Include clock.js -->
+    <script src="../clock.js"></script>
+</body>
+</html>
