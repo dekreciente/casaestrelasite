@@ -13,7 +13,7 @@ html, body {
 html {
     background: #fffff2;
     color: #3f3e3e;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-family: monospace; /* Not sure which font... should I use monospace or cambria? */
 }
 
 body {
@@ -95,7 +95,7 @@ main {
 
 /* Paragraph Styling */
 .home-text {
-    font-size: 40px; /* Large text */
+    font-size: 30px; /* Large text */
     line-height: 1.6;
     text-align: center; /* Spread text evenly across the page */
     margin: 0 auto; /* Center the text */
@@ -263,7 +263,7 @@ td {
 
   .content {
     position: absolute;
-    margin-top: 60px;
+    margin-top: 50px;
     width: 100%;
     height: calc(100% - 100px);
   }
@@ -285,3 +285,41 @@ td {
     list-style-type: square;
   }
 
+
+  /* Tool tip to add extra text to some keywords that way we can add more info or make it less serious :-)
+  Helena take a look to write this texts in some key places */ 
+
+ /* Tooltip container */
+.tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black; /* If you want dots under the hoverable text */
+  }
+  
+/* Tooltip text */
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: rgb(255, 251, 0);
+    color: Black;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+   
+    /* Position the tooltip text - see examples below! */
+    position: absolute;
+    z-index: 1;
+  }
+  
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+  }
+
+  /* This makes the text appear on the top */
+  .tooltip .tooltiptext {
+    width: 120px;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -60px; /* Use half of the width (120/2 = 60), to center the tooltip */
+  }
