@@ -23,6 +23,12 @@ body {
 }
 
 
+/* Estilo de palabras subrayadas */
+u {
+    text-decoration-style: dotted; /* Dotted underline */
+}
+
+
 /* Top Navigation Bar */
 .top-bar {
     display: flex;
@@ -41,7 +47,7 @@ body {
 }
 
 .casaestrela {
-    font-size: 18px;
+    font-size: 13px;
     text-decoration: none;
     color: #3f3e3e;
 }
@@ -53,7 +59,7 @@ body {
 }
 
 .nav li a {
-    font-size: 18px;
+    font-size: 13px;
     text-decoration: none;
     color: #3f3e3e;
     white-space: nowrap;
@@ -73,7 +79,7 @@ footer {
     text-align: left;
     padding: 1rem 2rem;
     border-top: 1px solid black;
-    font-size: 16px;
+    font-size: 13px;
     line-height: 1.6;
     background: #fffff2;
 }
@@ -128,7 +134,7 @@ a:hover {
     }
 
     .home-text {
-        font-size: 24px; /* Adjust font size for larger screens */
+        font-size: 20px; /* Adjust font size for larger screens */
         width: 70%; /* Limit width on larger screens for better readability */
         margin: 0 auto; /* Center the text */
     }
@@ -209,7 +215,7 @@ table {
     border-collapse: collapse; /* Ensures clean borders */
     width: 50%; /* Default width, adjust as needed */
     margin: 2rem auto; /* Center the table horizontally with margin */
-    font-size: 18px; /* Default font size */
+    font-size: 13px; /* Default font size */
     line-height: 1.5; /* Improve readability */
     border-collapse: collapse; /* Ensures clean borders */
 }
@@ -269,11 +275,11 @@ td {
   }
   
   .staywithus-text {
-    margin-bottom: 15px;
+    margin-bottom: 12px;
     margin-left: 2rem;
-    font-size: 20px;
-    line-height: 28px;
-    margin-top: 2rem;
+    font-size: 16px;
+    line-height: 24px;
+    margin-top: 0rem;
     
   }
 
@@ -281,7 +287,7 @@ td {
     margin-top: 20px;
     margin-bottom: 15px;
     margin-left: 6rem;
-    font-size: 20px;
+    font-size: 16px;
     list-style-type: square;
   }
 
@@ -323,3 +329,66 @@ td {
     left: 50%;
     margin-left: -60px; /* Use half of the width (120/2 = 60), to center the tooltip */
   }
+
+/* Located Page WIP I NEED TO ADD THE IMAGES TO THE RIGHT*/
+.container {
+    display: flex;           /* Flexbox to align items side by side */
+    height: 100vh;           /* Full height of the viewport */
+    flex-direction: row;     /* Default: horizontal layout */
+}
+
+/* Box1 - Left Column */
+.box1 {
+    flex: 1;                 /* Takes available space */
+    padding: 6rem;
+    overflow-y: auto;        /* Enable vertical scrolling for this box */
+    height: 100vh;           /* Full height of the viewport */
+}
+
+/* Box2 - Right Column */
+.box2 {
+    flex: 1;                 /* Takes available space */
+    padding: 6rem;
+    overflow-y: auto;        /* Enable vertical scrolling for this box */
+    height: 100vh;           /* Full height of the viewport */
+}
+
+/* Vertical separator line between box1 and box2 */
+.separator {
+    width: 1px;              /* Thin vertical line */
+    background-color: black; /* Color of the line */
+    height: 100vh;           /* Same height as the boxes */
+}
+
+
+.located-text {
+    margin-bottom: 12px;
+    margin-left: 2rem;
+    font-size: 16px;
+    line-height: 24px;
+    margin-top: 0rem; 
+      
+}
+
+.located-video {
+    width: 100%; /* Makes the video responsive */
+    height: auto; /* Keep aspect ratio */
+    border: 2px solid #ccc; /* Add a border */
+    border-radius: 8px; /* Round corners */
+    box-shadow: 0px 4px 10px yellow; /* Add shadow */
+    justify-content: center; /* Horizontally centers the video */
+    align-items: center; 
+
+}
+
+
+
+@media (max-width: 400px) {
+    .container {
+        flex-direction: column;
+    }
+}
+
+
+
+
